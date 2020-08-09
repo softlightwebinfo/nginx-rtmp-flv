@@ -4,24 +4,24 @@
 
 This repo is a Docker image of [nginx-http-flv-module](https://github.com/winshining/nginx-http-flv-module), include a [flv.js](https://github.com/bilibili/flv.js) demo.
 
-[中文说明](https://github.com/mugennsou/http-flv/blob/master/README_CN.md)
 
 ## Installation
 
 Pull Docker image:
 
 ```shell
-docker pull mugennsou/nginx-http-flv
+docker build --tag streaming:1.1 .
+
 ```
 
-Note: you can pull the `mugennsou/nginx-http-flv:dev` tag to experience the latest (in developing) nginx-http-module.
+Note: you can pull the `streaming:1.1` tag to experience the latest (in developing) nginx-http-module.
 
 ## Usage
 
 Start nginx-http-flv server:
 
 ```shell
-docker run --rm -it -p 80:80 -p 1935:1935 mugennsou/nginx-http-flv
+docker run --rm -it -p 81:80 -p 1935:1935 streaming:1.1
 ```
 
 Push RTMP stream to nginx-http-flv server:
